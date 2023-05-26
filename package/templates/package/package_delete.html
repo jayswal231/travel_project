@@ -1,0 +1,7 @@
+<h1>Delete Package</h1>
+<p>Are you sure you want to delete the package "{{ object.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete" class="btn btn-danger">
+    <a href="{% url 'package-list' %}" class="btn btn-secondary">Cancel</a>
+</form>

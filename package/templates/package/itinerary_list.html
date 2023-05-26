@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Itinerary List</title>
+    <!-- Add any CSS or JavaScript files here -->
+    <style>
+        .itinerary-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .itinerary-item h2 {
+            margin: 0;
+        }
+
+        .itinerary-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Itinerary List</h1>
+
+    {% for itinerary in object_list %}
+        <div class="itinerary-item">
+            <h2>{{ itinerary.title }}</h2>
+            <p><strong>package:</strong> {{ itinerary.package }}</p>
+            <p><strong>descriptions:</strong> {{ itinerary.descriptions }}</p>
+            <p><strong>trek_distance:</strong> {{ itinerary.trek_distance }}</p>
+            <p><strong>highest_altitude:</strong> {{ itinerary.highest_altitude }}</p>
+            <p><strong>trek_durations:</strong> {{ itinerary.trek_durations }}</p>
+            <p><strong>meals:</strong> {{ itinerary.meals }}</p>
+            <p><strong>date:</strong> {{ itinerary.date }}</p>
+        
+        </div>
+    {% endfor %}
+
+    <!-- Add any additional HTML content or templates here -->
+</body>
+</html>

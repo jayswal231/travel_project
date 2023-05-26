@@ -1,0 +1,29 @@
+<!-- company_profile.html -->
+{% for obj in object_list %}
+<h1>{{ obj.company_name }}</h1>
+
+{% if obj.company_profile %}
+{{obj.company_profile.url}}
+<img src="{{ obj.company_profile.url }}" alt="Company Profile">
+{% endif %}
+
+<div>
+    <h2>About Company:</h2>
+    <p>{{ obj.about_company }}</p>
+</div>
+
+<div>
+    <h2>Company History:</h2>
+    <p>{{ obj.company_history }}</p>
+</div>
+
+<div>
+    <h2>Company Missions:</h2>
+    <p>{{ obj.company_missions }}</p>
+</div>
+
+<div>
+    <h2>Your Value:</h2>
+    <p>{{ company.your_value }}</p>
+</div>
+{% endfor %}

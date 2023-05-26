@@ -1,0 +1,41 @@
+<!-- contact/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Package Enquiry List</title>
+</head>
+<body>
+  <h1>Package Enquiry List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Package</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>Number of Persons</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for enquiry in object_list %}
+        <tr>
+          <td>{{ enquiry.package }}</td>
+          <td>{{ enquiry.name }}</td>
+          <td>{{ enquiry.email }}</td>
+          <td>{{ enquiry.phone }}</td>
+          <td>{{ enquiry.message }}</td>
+          <td>{{ enquiry.number_of_persons }}</td>
+          <td>{{ enquiry.date }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="7">No enquiries found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

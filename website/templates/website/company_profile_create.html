@@ -1,0 +1,39 @@
+<!-- website/company_profile_create.html -->
+
+<h1>Create Company Profile</h1>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  
+  <div class="form-group">
+    <label for="id_company_name">Company Name:</label>
+    {{ form.company_name }}
+  </div>
+  
+  <div class="form-group">
+    <label for="id_company_profile">Company Profile Image:</label>
+    {{ form.company_profile }}
+  </div>
+  
+  <div class="form-group">
+    <label for="id_about_company">About Company:</label>
+    {{ form.about_company }}
+  </div>
+  
+  <div class="form-group">
+    <label for="id_company_history">Company History:</label>
+    {{ form.company_history }}
+  </div>
+  
+  <div class="form-group">
+    <label for="id_company_missions">Company Missions:</label>
+    {{ form.company_missions }}
+  </div>
+  
+  <div class="form-group">
+    <label for="id_your_value">Your Value:</label>
+    {{ form.your_value }}
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>

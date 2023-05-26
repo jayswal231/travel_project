@@ -1,0 +1,17 @@
+<!-- itinerary_delete.html -->
+<h1>Delete Itinerary</h1>
+
+<p>Are you sure you want to delete the following itinerary?</p>
+
+<h3>Title: {{ object.title }}</h3>
+<p>Description: {{ object.descriptions }}</p>
+<p>Trek Distance: {{ object.trek_distance }}</p>
+<p>Highest Altitude: {{ object.highest_altitude }}</p>
+<p>Trek Durations: {{ object.trek_durations }}</p>
+<p>Meals: {{ object.meals }}</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirm Delete</button>
+  <a href="{% url 'itinerary-list' %}">Cancel</a>
+</form>

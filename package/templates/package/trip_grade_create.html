@@ -1,0 +1,14 @@
+<!-- website/company_profile_create.html -->
+
+<h1>Trip Grade Create</h1>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  
+  <div class="form-group">
+    <label for="id_company_name">Trip Grade:</label>
+    {{ form.name }} 
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>

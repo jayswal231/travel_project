@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Package list</h1>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title">{{ object.name }}</h2>
+                <p class="card-text"><strong>name:</strong> {{ object.name }}</p>
+                <p class="card-text"><strong>price:</strong> {{ object.price }}</p>
+                <p class="card-text"><strong>discount_price:</strong> {{ object.discount_price }}</p>
+                <p class="card-text"><strong>trip_durations:</strong> {{ object.trip_durations }}</p>
+                <p class="card-text"><strong>trip_grade:</strong> {{ object.trip_grade }}</p>
+                <p class="card-text"><strong>highest_altitude:</strong> {{ object.highest_altitude }}</p>
+                <p class="card-text"><strong>accommodation:</strong> {{ object.accommodation }}</p>
+                <p class="card-text"><strong>group_size:</strong> {{ object.group_size }}</p>
+                <p class="card-text"><strong>best_season:</strong> {{ object.best_season }}</p>
+                <p class="card-text"><strong>brief_insight:</strong> {{ object.brief_insight }}</p>
+                <p class="card-text"><strong>highlights:</strong> {{ object.highlights }}</p>
+                <p class="card-text"><strong>itinerary:</strong> {{ object.itinerary }}</p>
+                <p class="card-text"><strong>includes:</strong> {{ object.includes }}</p>
+                <p class="card-text"><strong>excludes:</strong> {{ object.excludes }}</p>
+                <p class="card-text"><strong>trip_map:</strong> {{ object.trip_map }}</p>
+                <p class="card-text"><strong>benefits:</strong> {{ object.benefits }}</p>
+                <p class="card-text"><strong>comprehensive_guide:</strong> {{ object.comprehensive_guide }}</p>
+                <p class="card-text"><strong>packing_list:</strong> {{ object.packing_list }}</p>
+                <p class="card-text"><strong>frequently_asked_questions:</strong> {{
+                    object.frequently_asked_questions }}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

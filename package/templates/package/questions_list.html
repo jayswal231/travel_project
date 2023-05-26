@@ -1,0 +1,17 @@
+<h1>Frequently Asked Questions</h1>
+
+{% if object_list %}
+<ul>
+    {% for question in object_list %}
+    <li>
+        <h3>{{ question.question }}</h3>
+        <p>{{ question.answer }}</p>
+    </li>
+    {% empty %}
+    <li>No questions available.</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No questions available.</p>
+{% endif %}
+

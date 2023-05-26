@@ -1,0 +1,19 @@
+<h1>About Company</h1>
+
+<div class="container">
+    {% for about in object_list %}
+    <div class="card my-4">
+        <div class="card-body">
+            <p class="card-text"><strong>Company Name:</strong> {{ about.company_name }}</p>
+            {% if about.company_profile %}
+             <img src="{{ about.company_profile.url }}" alt="Company Profile" class="img-fluid">
+            {% endif %}
+            <p class="card-text"><strong>About Company:</strong> {{ about.about_company }}</p>
+            <p class="card-text"><strong>Title:</strong> {{ about.title }}</p>
+            <p class="card-text"><strong>Descriptions:</strong> {{ about.descriptions }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p>No about company information available.</p>
+    {% endfor %}
+</div>

@@ -1,0 +1,14 @@
+
+<html>
+<head>
+  <title>Itinerary Form</title>
+</head>
+<body>
+  <h1>Itinerary Form</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

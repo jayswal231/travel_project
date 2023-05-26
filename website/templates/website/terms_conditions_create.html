@@ -1,0 +1,14 @@
+<!-- website/company_profile_create.html -->
+
+<h1>Create Terms and Conditions</h1>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  
+  <div class="form-group">
+    <label for="id_company_name">Terms and conditions:</label>
+    {{ form.terms_conditions }}
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>

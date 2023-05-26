@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Package Lists</h1>
+        {% for package in object_list %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title">{{ package.name }}</h2>
+                <p class="card-text"><strong>name:</strong> {{ package.name }}</p>
+                <p class="card-text"><strong>price:</strong> {{ package.price }}</p>
+                <p class="card-text"><strong>discount_price:</strong> {{ package.discount_price }}</p>
+                <p class="card-text"><strong>trip_durations:</strong> {{ package.trip_durations }}</p>
+                <p class="card-text"><strong>trip_grade:</strong> {{ package.trip_grade }}</p>
+                <p class="card-text"><strong>highest_altitude:</strong> {{ package.highest_altitude }}</p>
+                <p class="card-text"><strong>accommodation:</strong> {{ package.accommodation }}</p>
+                <p class="card-text"><strong>group_size:</strong> {{ package.group_size }}</p>
+                <p class="card-text"><strong>best_season:</strong> {{ package.best_season }}</p>
+                <p class="card-text"><strong>brief_insight:</strong> {{ package.brief_insight }}</p>
+                <p class="card-text"><strong>highlights:</strong> {{ package.highlights }}</p>
+                <p class="card-text"><strong>itinerary:</strong> {{ package.itinerary }}</p>
+                <p class="card-text"><strong>includes:</strong> {{ package.includes }}</p>
+                <p class="card-text"><strong>excludes:</strong> {{ package.excludes }}</p>
+                <p class="card-text"><strong>trip_map:</strong> {{ package.trip_map }}</p>
+                <p class="card-text"><strong>benefits:</strong> {{ package.benefits }}</p>
+                <p class="card-text"><strong>comprehensive_guide:</strong> {{ package.comprehensive_guide }}</p>
+                <p class="card-text"><strong>packing_list:</strong> {{ package.packing_list }}</p>
+                <p class="card-text"><strong>frequently_asked_questions:</strong> {{ package.frequently_asked_questions }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<!-- contact/update_enquiry.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Package Enquiry</title>
+</head>
+<body>
+  <h1>Update Package Enquiry</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
